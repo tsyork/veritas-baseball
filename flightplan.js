@@ -3,17 +3,17 @@
  */
 var plan = require('flightplan');
 
-var appName = 'gcvanalytics_dev';
+var appName = 'veritas_bb';
 var username = 'deploy';
 var startFile = 'app.js';
-var foreverUid = 'dev';
+var foreverUid = 'bb';
 
 var tmpDir = appName+'-' + new Date().getTime();
 
 // configuration
 plan.target('staging', [
   {
-    host: '70.35.194.136',
+    host: '70.35.195.145',
     username: username,
     agent: process.env.SSH_AUTH_SOCK
   }
@@ -21,7 +21,7 @@ plan.target('staging', [
 
 plan.target('production', [
   {
-    host: '70.35.194.136',
+    host: '70.35.195.145',
     username: username,
     agent: process.env.SSH_AUTH_SOCK
   },
