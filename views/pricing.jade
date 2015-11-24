@@ -1,0 +1,83 @@
+extends layout
+
+//TODO: Add link to get back to home page
+//TODO: add link to GCV website
+
+block body
+  .container.content
+    h1 Pricing
+    br
+    .row
+      // Pricing
+      .col-md-4
+        .pricing.hover-effect
+          .pricing-head
+            h3
+              | Enterprise
+              span
+                | 5 Named Users
+            h4
+              i $
+              | 1499
+              span
+                | / Month
+          ul.pricing-content.list-unstyled
+            li
+              | Full Product Access
+            li
+              | Phone and Email Support
+            li
+              | Data Extracts
+            li
+              | Presentation-Ready Graphics
+
+      .col-md-4
+        .pricing.pricing-active.hover-effect
+          .pricing-head.pricing-head-active
+            h3
+              | Team
+              span
+                | 2 Named Users
+            h4
+              i $
+              | 999
+              span
+                | / Month
+          ul.pricing-content.list-unstyled
+            li
+              | Full Product Access
+            li
+              | Phone and Email Support
+            li
+              | Data Extracts
+            li
+              | Presentation-Ready Graphics
+
+      .col-md-4
+        .pricing.hover-effect
+          .pricing-head
+            h3
+              | Annual Pricing
+              span
+                | 2 or More Users
+            h4
+              i Contact Us
+              span
+                br
+          ul.pricing-content.list-unstyled
+            li
+              | Full Product Access
+            li
+              | Phone and Email Support
+            li
+              | Data Extracts
+            li
+              | Presentation-Ready Graphics
+    .row
+      .col-md-2.col-md-offset-5
+        a.btn.btn-primary.center-block(href='/contact') Contact Us
+
+
+    include footer.jade
+    div &nbsp;
+    div &nbsp;

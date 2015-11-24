@@ -1,0 +1,109 @@
+extends layout
+
+block body
+  div.container
+    h1 Insights as a Service
+    h2 The Answers You Need for Improved Decision-Making
+    //table.table.table-bordered
+    //  thead
+    //    tr
+    //      th What You Want to Know to Make Better Decisions
+    //      th Unique Analysis and Insights Provided by GVA
+    //  tbody
+    //    tr
+    //      td
+    //        div General trends on past partnerships and their outcomes
+    //        br
+    //        div Most recent partnership information - Who is partnering today, what are the intended goals
+    //      td
+    //        div Search for company partnerships
+    //        br
+    //        div Provide associated returns, both realized and unrealized and any desired trend analysis
+    //    tr
+    //      td
+    //        div Which investors have been the most active in specific regions, industry sectors, or technology segment?
+    //        br
+    //        div Which level of returns have they achieved?
+    //      td
+    //        div Venture participants
+    //        div •  Top investors (filtered sets)
+    //        div •  Immediate access to the details for each
+    //        div •  Provide associated returns, both realized and unrealized
+    //    tr
+    //      td
+    //        div How much are investors putting in for given rounds? At what pre-investment valuations?
+    //        br
+    //        div How has that worked out in the past?
+    //      td
+    //        div Statistical analysis
+    //        div •  Round sizes (max, min, median, average)
+    //        div •  Valuations
+    //        br
+    //        div Analysis of returns on investments
+    //    tr
+    //      td
+    //        div What types of investments have been made and how have these fared?
+    //        br
+    //        div What exits and IPOs have occurred?
+    //      td
+    //        div Transaction Analysis
+    //        div •  Search for a set of investments, exits, and/or IPOs
+    //        div •  Customized filter sets, sort order, and output formats
+    //    tr
+    //      td
+    //        div What deals have been made for company X or investor Y?
+    //        br
+    //        div What returns have been obtained from the investments?
+    //      td
+    //        div Extensive Search Capabilities
+    //        div •  Details associated with specific companies or venture participants
+    //        div •  Companies/investments meeting specific criteria
+    //        div Analysis of returns on investments
+
+  div.container
+    #accordion.panel-group(role='tablist', aria-multiselectable='true')
+      .panel.panel-default
+        #headingOne.panel-heading(role='tab')
+          h1.panel-title
+            a(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapseOne', aria-expanded='true', aria-controls='collapseOne')
+              | Who is investing with whom and how often?
+        #collapseOne.panel-collapse.collapse.in(role='tabpanel', aria-labelledby='headingOne')
+          .panel-body
+            | Search for trends on current and past investment partnerships and their outcomes.
+            | Find the most recent partnerships and their intended goals along with associated returns,
+            | both realized and unrealized and any desired trend analysis.
+      .panel.panel-default
+        #headingTwo.panel-heading(role='tab')
+          h1.panel-title
+            a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapseTwo', aria-expanded='false', aria-controls='collapseTwo')
+              | What regions and markets have recently seen the most activity?
+        #collapseTwo.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingTwo')
+          .panel-body
+            | Find out which investors have been the most active in specific regions, industry sectors, and technology segment.
+            | Filter your results by top investors with immediate access to details for each, including associated returns.
+      .panel.panel-default
+        #headingThree.panel-heading(role='tab')
+          h1.panel-title
+            a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapseThree', aria-expanded='false', aria-controls='collapseThree')
+              | What types of investments have been made and how have these fared?
+        #collapseThree.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingThree')
+          .panel-body
+            | Perform transaction analysis by sets of investments, exits, and/or IPOs.
+            | Create customized filter sets, sort order, and output formats.
+      .panel.panel-default
+        #headingFour.panel-heading(role='tab')
+          h1.panel-title
+            a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapseFour', aria-expanded='false', aria-controls='collapseFour')
+              | What deals have been made for company X or investor Y?
+        #collapseFour.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingFour')
+          .panel-body
+            | Using GCV Analytics extensive search capabilities, find all important details associated with specific companies or venture participants.
+            | Use custom filters to find companies/Investments meeting specific criteria.
+
+
+
+
+
+    include footer.jade
+    div &nbsp;
+    div &nbsp;

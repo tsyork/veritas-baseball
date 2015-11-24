@@ -1,0 +1,60 @@
+extends layout
+
+// TODO: Complete description text for each item
+// TODO: Add anchors for each item
+
+block body
+  .container-fluid
+    .row
+      //div(id='geo', class='anchor')
+      .col-md-7
+        img.img-responsive.img-rounded(src='images/geoactivity.png', alt='', style='border: 2px solid black')
+      .col-md-5
+        h1 Activity by Geography
+        p.medium
+          | Gain insights into the distribution of deals across the globe for any given sectors, industry verticals, investments vs. exits, and rounds. See breakdowns by sector or by round. Drill into the specific deals, investors, and portfolio companies.
+    .row
+      br
+    .row
+      //div(id='deals', class='anchor')
+      .col-md-5
+        h1 Deal Counts
+        p.medium
+          | Quickly visualize the trends in terms of number of annual, quarterly, or monthly deals.  Select the timeframe of interest, along with the sectors, industry verticals, investments vs. exists, rounds, and/or regions/countries. See breakdowns by sector, round or region. Drill into the specific deals, investors, and portfolio companies.
+      .col-md-7
+        img.img-responsive.img-rounded(src='images/dealcount.png', alt='', style='border: 2px solid black')
+    .row
+      br
+    .row
+      //div(id='export', class='anchor')
+      .col-md-7
+        img.img-responsive.img-rounded(src='images/export_highlight.png', alt='', style='border: 2px solid black')
+      .col-md-5
+        h1 Export Data
+        p.medium
+          | Easily create and download tables of deals into Excel for further analysis or comparison. Export charts as images (PNG or JPEG) or as PDF files for easy inclusion in presentations, articles or blogs.
+    .row
+      br
+    .row
+      //div(id='round', class='anchor')
+      .col-md-5
+        h1 Round Analysis
+        p.medium
+          | Analyze key trends in the data such as changes in round size, foreign versus domestic investing, and levels of syndication across the top investors. Visualize these analyses across various timeframes, locations, rounds, and sectors. Identify and understand outliers in the data. Drill down on the specific deals, investors and portfolio companies.
+      .col-md-7
+        img.img-responsive.img-rounded(src='images/roundsize.png', alt='', style='border: 2px solid black')
+    .row
+      br
+    .row
+      //div(id='search', class='anchor')
+      .col-md-7
+        img.img-responsive.img-rounded(src='images/search.png', alt='', style='border: 2px solid black')
+      .col-md-5
+        h1 Powerful Search Capabilities
+        p.medium
+          | Search for portfolio companies, investors or deals meeting selected criteria. Look up companies by selected regions, countries, and/or sectors, or search the entire database. Find investors by corporates vs. non-corporates, or search entire database.  Obtain an itemized listing of investments or exits for specific regions, countries, rounds, sectors, timeframes, and/or dollar sizes.
+
+  include footer.jade
+
+  div &nbsp;
+  div &nbsp;

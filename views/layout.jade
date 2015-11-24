@@ -1,0 +1,114 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(content='IE=edge', http-equiv='X-UA-Compatible')
+    meta(content='width=device-width, initial-scale=1', name='viewport')
+    title= 'Who\'s on First?'
+    link(href='/bootstrap/dist/css/bootstrap.min.css', rel='stylesheet')
+    link(href='/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css', rel='stylesheet')
+    link(href='/font-awesome/css/font-awesome.min.css', rel='stylesheet')
+
+    link(href='/css/custom.css', rel='stylesheet')
+    link(href='/css/small-business-gcv.css', rel='stylesheet')
+
+    link(href='https://fonts.googleapis.com/css?family=Open+Sans', rel='stylesheet' type='text/css')
+    link(href='https://fonts.googleapis.com/css?family=Merriweather+Sans', rel='stylesheet' type='text/css')
+    link(href='https://fonts.googleapis.com/css?family=Merriweather', rel='stylesheet' type='text/css')
+    link(href='https://fonts.googleapis.com/css?family=Oswald', rel='stylesheet' type='text/css')
+    link(href='https://fonts.googleapis.com/css?family=Alegreya+SC:400,700', rel='stylesheet' type='text/css')
+    link(href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700', rel='stylesheet' type='text/css')
+    link(href="http://www.jeffs-icons.com/71354/LK-MLB.gif", rel="shortcut icon", type='image/x-icon')
+
+    <!--[if lt IE 9 ]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    block termshdr
+
+  body
+    nav.navbar.navbar-fixed-top.navbar-default(role='navigation')
+      .container-fluid
+        // Brand and toggle get grouped for better mobile display
+        button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
+          span.sr-only Toggle navigation
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        //a.navbar-brand(href='/', title='GCV Analytics')
+        a.navbar-brand
+          span.image
+            table
+              tr
+                th
+                  a(href='http://www.mlb.com', target='_blank')
+                    img(src='/images/mlb-logo-1-300x154.gif', style='max-width: 100px; margin-bottom: 5px; ')
+                th
+                  a(href='http://www.qbixanalytics.com', target='_blank')
+                    img(src='/images/qbixpowered.png', style='max-width: 150px; margin-bottom: 5px;')
+        //a.navbar-brand(href='http://www.globalcorporateventuring.com', title='GCV Analytics')
+        //  img(style='max-width:200px;', src='images/GCVAnalytics.png')
+        //a.navbar-brand(href='http://www.qbixanalytics.com', title='QBIX Analytics')
+        //  img(style='max-width:150px;', src='images/PoweredByQBIX.png')
+        // Collect the nav links, forms, and other content for toggling
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+
+          style(type='text/css').
+            navfont {
+              font-family: 'Merriweather Sans', sans-serif;
+              font-weight: 700;
+              font-size: medium;
+            }
+          ul.nav.navbar-nav.navbar-right
+            li
+              a(href='/')
+                navfont Home
+            li
+              a(href='/contact')
+                navfont Contact Us
+            if user
+              //li
+              //  a(href='/dashboard')
+              //    navfont Dashboard
+              //li
+              //  a(href='/support')
+              //    navfont Support
+              li
+                a(href='/logout')
+                  navfont Logout
+              //if user.customData.isAdministrator = 'true'
+              //  li.dropdown
+              //    a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+              //      navfont #{user.customData.isAdministrator}
+              //      span.caret
+              //    ul.dropdown-menu
+              //      li
+              //        a(href='/demo_requests') Demo Requests
+                    //li.divider(role='separator')
+                    //li
+                    //  a(href="/logout") Logout
+            else
+              //li
+              //  a(href='/demo_requests/new')
+              //    navfont Request Demo
+              //li
+              //  a(href='/about')
+              //    navfont About
+              //li
+              //  a(href='/pricing')
+              //    navfont Pricing
+              li
+                a(href='/login')
+                  navfont Sign In
+    block body
+
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js')
+    script(type='text/javascript', src='/moment/min/moment.min.js')
+    script(src='/bootstrap/dist/js/bootstrap.min.js')
+    script(type='text/javascript', src='/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js')
+    script(type='text/javascript', src='https://online.tableau.com/javascripts/api/tableau-2.0.0.js')
+    script(type='text/javascript').
+      $(function () {
+        $('#datetimepicker4').datetimepicker();
+      });
+

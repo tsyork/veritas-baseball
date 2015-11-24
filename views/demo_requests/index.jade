@@ -1,0 +1,45 @@
+extends ../layout
+
+block body
+   h1.
+      #{title}
+   div.table-responsive
+      table.table-bordered.table-hover
+            thead
+               tr
+                  th Request Date
+                  th Email
+                  th Preferred Date
+                  th Other Info
+                  th Priorities
+                  th Data Subscriptions
+                  th Status
+                  th Assigned To
+            tbody
+               each demo_request, i in demo_requests
+                  tr
+                     td
+                        = demo_request.created_at
+                     td
+                        = demo_request.email
+                     td
+                        = demo_request.pref_date
+                     td
+                        = demo_request.other_info
+                     td
+                        = demo_request.priorities
+                     td
+                        = demo_request.subscriptions
+                     td
+                        = demo_request.status
+                     td
+                        = demo_request.assigned_to
+                     td
+                        a(href='/demo_requests/#{demo_request._id}/edit') View
+                     //td
+                     //   form(action='/demo_requests/#{demo_request._id}/edit',method='post',enctype='application/x-www-form-urlencoded')
+                     //      input(type='hidden',value='DELETE',name='_method')
+                     //      button(type='submit').
+                     //         Delete
+
+

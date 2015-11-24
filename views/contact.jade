@@ -1,0 +1,46 @@
+extends layout
+
+//TODO: add link to call out demo request
+//TODO: add privacy text (Tim L to provide text)
+
+block body
+  .container
+    br
+    br
+    h1 Contact Us
+    p.lead What's on your mind?
+    br
+    form.form-horizontal(role='form', method="post", action="/request_demo")
+      .form-group
+        label.control-label.col-sm-2 Topic:
+        .col-sm-10
+          select#topic.form-control(name="topic", placeholder='Select topic')
+            option Please select a topic from the drop-down list...
+            option Request Quote
+            option Ask a Question
+            option Provide Feedback
+      .form-group
+        label.control-label.col-sm-2 Subject:
+        .col-sm-10
+          input.form-control(type='text', name="subject", placeholder='Please enter subject here.')
+      .form-group
+        label.control-label.col-sm-2 Comment/Question:
+        .col-sm-10
+          textarea#comment.form-control(name="comment", rows=5, placeholder='What would you like to say?')
+      .form-group
+        label.control-label.col-sm-2(for='email') Email:
+        .col-sm-10
+          input#email.form-control(type='email', name="email", placeholder='What is the best email address for us to contact you?')
+      .form-group
+        .col-sm-offset-2.col-sm-2
+          button.btn.btn-default.btn-primary(type='submit') Submit
+          a(href='/')
+            button.btn(type="button") Cancel
+        .col-sm-8
+          .checkbox
+            label
+              input(type='checkbox', name='newsletter')
+              |  Please add me to the GCV newsletter mailing list.
+br
+h4= info
+

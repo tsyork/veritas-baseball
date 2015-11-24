@@ -1,0 +1,53 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(content='IE=edge', http-equiv='X-UA-Compatible')
+    meta(content='width=device-width, initial-scale=1', name='viewport')
+    title= 'GCV Analytics | ' + title
+    link(href='bootstrap/dist/css/bootstrap.min.css', rel='stylesheet')
+    link(href='font-awesome/css/font-awesome.min.css', rel='stylesheet')
+    link(href='css/custom.css', rel='stylesheet')
+    link(href="images/favicon.ico", rel="shortcut icon", type='image/x-icon')
+
+    <!--[if lt IE 9 ]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    block termshdr
+
+  body
+    nav.navbar.navbar-default.navbar-fixed-top
+      .container-fluid
+        // Brand and toggle get grouped for better mobile display
+        .navbar-header
+          button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href='#', title='GCV Analytics')
+            img(style='max-width:200px; margin-top: -7px;', src='images/GCVAnalytics.png')
+        // Collect the nav links, forms, and other content for toggling
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+          ul.nav.navbar-nav.navbar-inner
+            a.navbar-brand(href='#', title='Powered by QBIX Analytics')
+              img(style='max-width:150px; margin-top: -10px;', src='images/PoweredByQBIX.png')
+          ul.nav.navbar-nav.navbar-right
+            li
+              a(href='/contact') Contact Us
+            if user
+              li
+                a(href='/support') Support
+              li
+                a(href='/logout') Logout
+            else
+              li
+                a(href='/about') About
+              li
+                a(href='/login') Sign In
+    block body
+
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js')
+    script(src='bootstrap/dist/js/bootstrap.min.js')
+    script(type='text/javascript', src='https://online.tableau.com/javascripts/api/tableau-2.0.0.js')

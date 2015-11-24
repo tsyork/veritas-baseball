@@ -1,0 +1,53 @@
+//
+   Created by timyork on 10/1/15.
+
+extends layout
+
+block body
+   block body
+      h1= title
+      form(method="post" action="/create")
+         label(for="comment") Got something to say:
+         input(type="text", name="demo_request", value=demo_request)
+         input(type="submit", value="Save")
+      br
+      - for demo
+
+   //.container
+   //   br
+   //   br
+   //   h1 Request a Product Demonstration
+   //   br
+   //   form.form-horizontal(role='form', method="post", action="/request_demo")
+   //      .form-group
+   //         label.control-label.col-sm-2 Focus Area(s):
+   //         .col-sm-10
+   //            input.form-control(type='text', name="priorities", rows=5, placeholder='What are your key priorities and areas of focus for using a venture data product?')
+   //      .form-group
+   //         label.control-label.col-sm-2 Data Subscriptions:
+   //         .col-sm-10
+   //            input.form-control(type='text', name="subscriptions", rows=5, placeholder='Have you, or do you currently subscribe to other venture data products?')
+   //      .form-group
+   //         label.control-label.col-sm-2 Preferred Date:
+   //         .col-sm-10
+   //            input#datetimepicker4.form-control(type='datepickerInput', name="pref_date", placeholder='What is the earliest date you would like to see the product?')
+   //      .form-group
+   //         label.control-label.col-sm-2(for='email') Email:
+   //         .col-sm-10
+   //            input#email.form-control(type='email', name="email", placeholder='What is the best email address for us to contact you?')
+   //      .form-group
+   //         label.control-label.col-sm-2 Other Info:
+   //         .col-sm-10
+   //            textarea#other_info.form-control(name="other_info", rows=5, placeholder='Is there anything else we should know to help us better understand your needs?')
+   //      .form-group
+   //         .col-sm-offset-2.col-sm-2
+   //            button.btn.btn-default.btn-primary(type='submit') Submit
+   //            a(href='/')
+   //               button.btn(type="button") Cancel
+   //         .col-sm-8
+   //            .checkbox
+   //               label
+   //                  input(type='checkbox', name='newsletter')
+   //                  |  Please add me to the GCV newsletter mailing list.
+br
+h4= info

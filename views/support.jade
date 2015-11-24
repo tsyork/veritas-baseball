@@ -1,0 +1,39 @@
+extends layout
+block body
+  .container
+    br
+    br
+    h1 Support Page
+    p.lead Please describe your issue.
+    br
+    form(role='form', method="post", action="/support", style='max-width: 600px;')
+      .form-group
+        select#issue_type.form-control(name="issue_type", placeholder='Select the type of issue encountered')
+          option Please select an issue type...
+          option User Management
+          option Product Issue
+          option Other
+      .form-group
+        select#location.form-control(name="location", placeholder='Select the location where you encountered the issue (optional)')
+          option Please select the issue location (optional)...
+          option Login Page
+          option Landing Page
+          option Deals
+          option Investors
+          option Deals
+          option Search
+          option Analysis
+          option Other
+      .form-group
+        input.form-control(type='text', name="subject", placeholder='Please enter brief description of issue.')
+      .form-group
+        textarea#description.form-control(name="description", rows=5, placeholder='Please enter detailed description of the issue.')
+      .form-group
+        input#email.form-control(type='text', name="email", placeholder='Please enter the best email address to reach you...')
+      button.btn.btn-default(type='submit') Submit
+      &nbsp;
+      a(href='/')
+        button.btn.btn-primary(type="button") Cancel
+br
+h4= info
+

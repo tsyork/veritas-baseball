@@ -1,0 +1,106 @@
+extends layout
+
+//TODO: Add google analytics tracking
+
+block body
+  .container-fluid
+    .row
+      .col-md-8
+        #carousel-example-generic.carousel.slide(data-ride='carousel')
+          // Indicators
+          ol.carousel-indicators
+            li.active(data-target='#carousel-example-generic', data-slide-to='0')
+            li(data-target='#carousel-example-generic', data-slide-to='1')
+            li(data-target='#carousel-example-generic', data-slide-to='2')
+            li(data-target='#carousel-example-generic', data-slide-to='3')
+            li(data-target='#carousel-example-generic', data-slide-to='4')
+            li(data-target='#carousel-example-generic', data-slide-to='5')
+          // Wrapper for slides
+          .carousel-inner(role='listbox')
+            .item.active
+              a(href='/features')
+                img.img-responsive.img-rounded(src='images/dealcount.png', alt='')
+                .carousel-caption
+                //| deal count caption here
+            .item
+              a(href='/features')
+                img.img-responsive.img-rounded(src='images/export_highlight.png', alt='')
+                .carousel-caption
+                //| export caption here
+            .item
+              a(href='/features')
+                img.img-responsive.img-rounded(src='images/geoactivity.png', alt='')
+                .carousel-caption
+                  //| geo activity caption here
+            .item
+              a(href='/features')
+                img.img-responsive.img-rounded(src='images/search.png', alt='')
+                .carousel-caption
+                  //| geo activity caption here
+            .item
+              a(href='/features')
+                img.img-responsive.img-rounded(src='images/roundsize.png', alt='')
+                .carousel-caption
+                  //| geo activity caption here
+          // Controls
+          a.left.carousel-control(href='#carousel-example-generic', role='button', data-slide='prev')
+            span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
+            span.sr-only Previous
+          a.right.carousel-control(href='#carousel-example-generic', role='button', data-slide='next')
+            span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
+            span.sr-only Next
+          //#carouselButtons
+          //  button#playButton.btn.btn-default.btn-xs(type='button')
+          //    span.glyphicon.glyphicon-play
+          //  button#pauseButton.btn.btn-default.btn-xs(type='button')
+          //    span.glyphicon.glyphicon-pause
+        //img.img-responsive.img-rounded(src='images/landing-page_900x350.png', alt='')
+      .col-md-4
+        h1 Insights as a Service
+        p.medium
+          | Global Corporate Venturing Analytics addresses the gaps found in traditional, broadly marketed data products to deliver corporate venture teams the data and tools they need to develop the insights and data-driven decisions. We provide data and insights for Corporate Venturers, Private Equity Firms and Venture Capitalists through a self-service analytics platform that enables you to get what you need, when you need it.
+        br
+        p.medium
+          | Our analytics are powered by more than 5 years of Corporate Venture Capital investment activity data, kept current using state-of-the-art data gathering technology. It is augmented with quantitative data with qualitative insights from strategic industry surveys and access to top experts in a variety of industries.
+        // p
+        // br
+        //p
+        //p Already a subscriber?
+        //p
+        //  a.btn.btn-primary(href="/login") Login now
+      // /.col-md-4
+    // /.row
+    hr
+    // Call to Action Well
+    .row
+      .col-lg-12
+        .well.text-center
+          | Self-service analytics to create meaningful insights and benchmark your venture funds
+      // /.col-lg-12
+    // /.row
+    // Content Row
+    .row
+      .col-md-4
+        a(href='/request_demo')
+          img.img-responsive(src='images/demo_banner.png', alt='', style='verticalAlign:middle')
+      // /.col-md-4
+      .col-md-4
+        h2.text-center Use Cases
+        p
+          | With powerful search and data analytics capabilities, our platform enables users to find emerging trends by sector or geography and
+          | easily identify disruptive technologies and products. We also enable you to benchmark your investment results and track company goals against
+          | the entire industry.
+      // /.col-md-4
+      .col-md-4
+        h2.text-center Ease of Use
+        p
+          | While providing powerful search and analytics capabilities, our platform is also remarkably easy to use. It has been built with both the in-depth data analyst and higher level C-suite user in mind to ensure quick extraction of important insights by any user in your organization.
+      // /.col-md-4
+    // /.row
+    .row
+      .col-md-2.col-md-offset-5
+        a.btn.btn-primary.center-block(href='/use_cases') More Info
+  include footer.jade
+
+  div &nbsp;
+  div &nbsp;

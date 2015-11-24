@@ -1,0 +1,28 @@
+extends layout
+block body
+  .container
+    br
+    br
+    h1 Contact Us
+    p.lead What's on your mind?
+    br
+    form(role='form', method="post", action="/contact", style='max-width: 600px;')
+      .form-group
+        select#topic.form-control(name="topic", placeholder='Select topic')
+          option Please select a topic
+          option Request Two Week Trial
+          option Request Quote
+          option Ask a Question
+      .form-group
+        input.form-control(type='text', name="subject", placeholder='Enter subject')
+      .form-group
+        textarea#comment.form-control(name="comment", rows=5, placeholder='Please enter detailed description...')
+      .form-group
+        input#email.form-control(name="email", placeholder='Email address where we can reach you.')
+      button.btn.btn-default(type='submit') Submit
+      &nbsp;
+      a(href='/dashboard')
+        button.btn.btn-primary(type="button") Cancel
+br
+h4= info
+

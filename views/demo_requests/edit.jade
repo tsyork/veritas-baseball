@@ -1,0 +1,65 @@
+extends ../layout
+
+block body
+   h1.
+      Demo Request ID #{demo_request._id}
+   form(action='/demo_requests/#{demo_request._id}/edit',method='post',name='updatedemorequest',enctype='application/x-www-form-urlencoded')
+      .form-group
+         p
+            b Created Date: &nbsp
+            | #{demo_request.created_at}
+         p
+            b Email: &nbsp
+            | #{demo_request.email}
+         p
+            b Other Info: &nbsp
+            | #{demo_request.other_info}
+         p
+            b Subscriptions?:
+            | #{demo_request.subscriptions}
+         p
+            input(type='hidden',value='PUT',name='_method')
+         p
+            button#btnSubmit(type='submit').
+               Update
+
+   .container
+      br
+      br
+      h1 Request a Product Demonstration
+      br
+      form.form-horizontal(role='form', name="addDemoRequest", method="post", action="/demo_requests")
+         .form-group
+            label.control-label.col-sm-2 Date Created:
+            .col-sm-10
+               input.form-control(type='text', name="priorities", rows=5, placeholder='What are your key priorities and areas of focus for using a venture data product?')
+         .form-group
+            label.control-label.col-sm-2 Focus Area(s):
+            .col-sm-10
+               input.form-control(type='text', name="priorities", rows=5, placeholder='What are your key priorities and areas of focus for using a venture data product?')
+         .form-group
+            label.control-label.col-sm-2 Data Subscriptions:
+            .col-sm-10
+               input.form-control(type='text', name="subscriptions", rows=5, placeholder='Have you, or do you currently subscribe to other venture data products?')
+         .form-group
+            label.control-label.col-sm-2 Preferred Date:
+            .col-sm-10
+               input#datetimepicker4.form-control(type='datepickerInput', name="pref_date", placeholder='What is the earliest date you would like to see the product?')
+         .form-group
+            label.control-label.col-sm-2(for='email') Email:
+            .col-sm-10
+               input#email.form-control(type='email', name="email", placeholder='What is the best email address for us to contact you?')
+         .form-group
+            label.control-label.col-sm-2 Other Info:
+            .col-sm-10
+               textarea#other_info.form-control(name="other_info", rows=5, placeholder='Is there anything else we should know to help us better understand your needs?')
+         .form-group
+            .col-sm-offset-2.col-sm-2
+               button.btn.btn-default.btn-primary(type='submit') Submit
+               a(href='/')
+                  button.btn(type="button") Cancel
+            .col-sm-8
+               .checkbox
+                  label
+                     input(type='checkbox', name='newsletter')
+                     |  Please add me to the GCV newsletter mailing list.
